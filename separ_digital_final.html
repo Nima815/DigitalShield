@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سپر دیجیتال | راهنمای امنیت سایبری</title>
+<style>
+:root{--bg:#080b12;--panel:#111827;--panel2:#0d1420;--text:#eef3fb;--muted:#9aa8bb;--line:#263449;--cyan:#36d6c5;--blue:#4d8dff;--gold:#f5c76b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 0%,#13253a 0,transparent 35%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#080b12eF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{font-weight:900;font-size:19px;display:flex;align-items:center;gap:10px}.logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;color:#061018;font-weight:900}.links{display:flex;gap:22px;color:var(--muted);font-size:14px}.links a:hover{color:var(--cyan)}
+.hero{padding:76px 0 58px;display:grid;grid-template-columns:1.3fr .7fr;gap:34px;align-items:center}.eyebrow{color:var(--cyan);font-size:13px;font-weight:bold;letter-spacing:.4px}.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.35;margin:12px 0}.hero h1 span{color:var(--cyan)}.hero p{color:var(--muted);max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{padding:10px 18px;border-radius:10px;background:var(--cyan);color:#061018;font-weight:bold;display:inline-block}.btn.alt{background:transparent;border:1px solid var(--line);color:var(--text)}.shield{min-height:250px;border:1px solid #29445b;border-radius:24px;background:linear-gradient(145deg,#132638,#0c1420);display:grid;place-items:center;position:relative;overflow:hidden}.shield:before,.shield:after{content:"";position:absolute;border:1px solid #36d6c533;border-radius:50%;width:230px;height:230px}.shield:after{width:175px;height:175px}.shield-icon{font-size:90px;filter:drop-shadow(0 0 22px #36d6c566);z-index:1}
+section{padding:38px 0}.section-head{margin-bottom:22px}.section-head h2{font-size:25px;margin:0}.section-head p{color:var(--muted);margin:5px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(160deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:16px;padding:20px}.card .ico{font-size:27px}.card h3{margin:8px 0 5px;font-size:17px}.card p{color:var(--muted);font-size:14px;margin:0}.tag{display:inline-block;margin-top:14px;color:var(--cyan);font-size:12px;border-bottom:1px dashed #36d6c577;transition:color .2s,border-color .2s}.tag:hover{color:#fff;border-color:var(--cyan)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{padding:16px;border:1px solid var(--line);border-radius:14px;background:#0d1420}.num{color:var(--cyan);font-size:13px;font-weight:bold}.step b{display:block;margin:5px 0}.step small{color:var(--muted)}
+.quiz{max-width:720px;margin:auto;background:#111b2a;border:1px solid #2a4058;border-radius:18px;padding:22px;box-shadow:0 18px 45px #0004}.quiz-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.quiz-brand{font-size:13px;color:#91a8c2}.quiz-progress{height:5px;background:#263449;border-radius:20px;overflow:hidden;margin:10px 0 20px}.quiz-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--blue));transition:width .35s ease}.question{font-size:19px;font-weight:bold;margin-bottom:18px;line-height:1.8}.option{position:relative;display:flex;align-items:center;gap:12px;width:100%;text-align:right;background:#172438;border:1px solid #2a4058;color:var(--text);padding:13px 15px;border-radius:13px;margin:10px 0;cursor:pointer;font:inherit;overflow:hidden;transition:border-color .2s,background .2s,transform .2s}.option:hover{border-color:var(--cyan);transform:translateY(-1px)}.option:disabled{cursor:default;opacity:1}.option .choice-dot{width:21px;height:21px;flex:0 0 21px;border:2px solid #71849b;border-radius:50%;display:grid;place-items:center;z-index:1}.option .choice-dot:after{content:'';width:9px;height:9px;border-radius:50%;background:transparent}.option.correct{border-color:#27c99a;background:#12352f}.option.correct .choice-dot{border-color:#27c99a}.option.correct .choice-dot:after{background:#27c99a}.option.wrong{border-color:#ed7777;background:#3a2229}.option .option-label{position:relative;z-index:1;flex:1}.feedback{margin-top:15px;color:#b9c9dc;min-height:28px;font-size:14px}.quiz button.next{margin-top:12px;border:0;cursor:pointer;font:inherit}.quiz-foot{font-size:12px;color:#8193aa;margin-top:12px}.quiz-result{text-align:center;padding:22px 8px}.quiz-result .score{font-size:38px;color:var(--cyan);font-weight:900}.quiz-result p{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px;margin-top:30px}.check{display:block;padding:9px 4px;border-bottom:1px solid var(--line);color:var(--text)}.check input{accent-color:var(--cyan);margin-left:10px;transform:scale(1.2)}.notice{border-right:3px solid var(--gold);padding:10px 14px;background:#f5c76b12;color:#d8c9a5;border-radius:8px;font-size:13px;margin-top:20px}
+/* انیمیشن‌های ظریف و سبک */
+@keyframes floatShield{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-13px) rotate(2deg)}}
+@keyframes ringPulse{0%{transform:scale(.82);opacity:.7}100%{transform:scale(1.28);opacity:0}}
+@keyframes glowPulse{0%,100%{filter:drop-shadow(0 0 12px #36d6c544)}50%{filter:drop-shadow(0 0 28px #36d6c5aa)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shine{0%{transform:translateX(-140%)}100%{transform:translateX(140%)}}
+.shield:before{animation:ringPulse 3.2s ease-out infinite}.shield:after{animation:ringPulse 3.2s ease-out 1.6s infinite}.shield-icon{animation:floatShield 4s ease-in-out infinite,glowPulse 3s ease-in-out infinite}
+.card,.step,.quiz{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}.card:hover,.step:hover{transform:translateY(-7px);border-color:#36d6c588;box-shadow:0 14px 32px #0005}
+.btn{position:relative;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px #36d6c533}.btn:after{content:"";position:absolute;top:-30%;left:0;width:35%;height:160%;background:#ffffff55;transform:translateX(-140%) skewX(-20deg)}.btn:hover:after{animation:shine .7s ease}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.logo{animation:glowPulse 3.5s ease-in-out infinite}
+
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px}.shield{min-height:180px}.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.links{gap:10px;font-size:12px}.brand{font-size:16px}}
+@media(max-width:430px){.links a:nth-child(2){display:none}.steps{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#home"><span class="logo">S</span> سپر دیجیتال</a><nav class="links"><a href="#topics">موضوعات</a><a href="#lessons">آموزش کامل</a><a href="#habits">عادت‌های امن</a><a href="#checklist">چک‌لیست</a><a href="#quiz">آزمون</a></nav></div></header>
+<main class="wrap" id="home">
+<section class="hero"><div><div class="eyebrow">راهنمای ساده برای زندگی آنلاین امن‌تر</div><h1>در دنیای آنلاین،<br><span>هوشمندانه محافظت کن.</span></h1><p>امنیت سایبری یعنی مراقبت از اطلاعات، حساب‌ها و دستگاه‌هایمان در فضای دیجیتال. با چند عادت ساده می‌توانیم احتمال بسیاری از خطرهای اینترنتی را کمتر کنیم.</p><div class="actions"><a class="btn" href="#topics">شروع یادگیری</a><a class="btn alt" href="#quiz">شرکت در آزمون</a></div></div><div class="shield"><div class="shield-icon">🛡️</div></div></section>
+<section id="topics"><div class="section-head"><h2>با چه چیزهایی آشنا می‌شویم؟</h2><p>سه موضوع مهم برای استفاده امن‌تر از اینترنت</p></div><div class="grid">
+<article class="card"><div class="ico">🔑</div><h3>رمز عبور قوی</h3><p>برای هر حساب، رمز طولانی و متفاوت انتخاب کن. از رمزهای قابل حدس مثل تاریخ تولد استفاده نکن.</p><a class="tag" href="#account-safety">حفاظت از حساب‌ها ←</a></article>
+<article class="card"><div class="ico">🎣</div><h3>فیشینگ و پیام‌های جعلی</h3><p>روی لینک‌های ناشناس عجله‌ای کلیک نکن. نشانی فرستنده و آدرس سایت را با دقت بررسی کن.</p><a class="tag" href="#online-fraud">تشخیص فریب آنلاین ←</a></article>
+<article class="card"><div class="ico">🔒</div><h3>حریم خصوصی</h3><p>اطلاعات شخصی، رمزها و کدهای تأیید را برای دیگران نفرست و تنظیمات حریم خصوصی را بررسی کن.</p><a class="tag" href="#data-care">مراقبت از اطلاعات ←</a></article>
+</div></section>
+<section id="lessons"><div class="section-head"><h2>آموزش قدم‌به‌قدم امنیت سایبری</h2><p>هر درس را بخوان و نکته‌های مهمش را برای استفاده روزمره به خاطر بسپار.</p></div><div class="grid">
+<article class="card"><div class="ico">🔑</div><h3>درس ۱: ساخت رمز عبور مناسب</h3><p><b>چرا مهم است؟</b> رمز عبور از حساب‌ها و اطلاعات شخصی محافظت می‌کند.</p><p><b>چه کار کنیم؟</b> یک عبارت طولانی و منحصربه‌فرد انتخاب کن؛ برای حساب‌های مختلف رمزهای جدا داشته باش و آن‌ها را در اختیار دیگران نگذار.</p><p><b>مثال:</b> به‌جای رمزهای ساده و قابل حدس، از ترکیب چند واژه نامرتبط همراه با عدد و نشانه استفاده کن.</p><span class="tag">نکته: رمز را در پیام‌رسان نفرست.</span></article>
+<article class="card"><div class="ico">🎣</div><h3>درس ۲: شناخت فیشینگ</h3><p><b>فیشینگ چیست؟</b> تلاشی فریبکارانه برای وادارکردن افراد به دادن رمز، اطلاعات بانکی یا کد تأیید است.</p><p><b>نشانه‌ها:</b> پیام فوری و تهدیدآمیز، وعده جایزه غیرعادی، غلط‌های نگارشی، فرستنده ناشناس یا نشانی اینترنتی مشکوک.</p><p><b>چه کار کنیم؟</b> روی لینک کلیک نکن؛ از راه رسمی وارد حساب شو و پیام را به بزرگ‌تر یا پشتیبانی مربوط گزارش بده.</p><span class="tag">نکته: ظاهر حرفه‌ای پیام دلیل معتبر بودنش نیست.</span></article>
+<article class="card"><div class="ico">📲</div><h3>درس ۳: تأیید دومرحله‌ای</h3><p><b>چیست؟</b> روشی که علاوه بر رمز عبور، یک مرحله تأیید دیگر برای ورود می‌خواهد.</p><p><b>چرا مفید است؟</b> اگر کسی رمز را بداند، باز هم ممکن است نتواند وارد حساب شود.</p><p><b>چه کار کنیم؟</b> هرجا امکانش هست فعالش کن، کدهای پشتیبان را در جای امن نگه دار و هیچ کد یک‌بارمصرفی را برای کسی نخوان.</p><span class="tag">نکته: کد تأیید مثل کلید خانه است.</span></article>
+<article class="card"><div class="ico">🧩</div><h3>درس ۴: به‌روزرسانی دستگاه</h3><p><b>چرا مهم است؟</b> به‌روزرسانی‌ها علاوه بر امکانات تازه، بسیاری از اشکال‌ها و ضعف‌های امنیتی شناخته‌شده را اصلاح می‌کنند.</p><p><b>چه کار کنیم؟</b> سیستم‌عامل و برنامه‌ها را از تنظیمات یا فروشگاه رسمی به‌روز نگه دار. از نصب فایل‌های ناشناس خودداری کن.</p><span class="tag">نکته: قبل از به‌روزرسانی مهم، از فایل‌های مهم نسخه پشتیبان داشته باش.</span></article>
+<article class="card"><div class="ico">📶</div><h3>درس ۵: وای‌فای عمومی</h3><p><b>خطر احتمالی:</b> شبکه‌های عمومی ممکن است جعلی یا ناامن باشند.</p><p><b>چه کار کنیم؟</b> نام شبکه را از مسئول محل بپرس، به هشدارهای امنیتی مرورگر توجه کن، برای کارهای حساس از شبکه مطمئن استفاده کن و پس از پایان، اتصال خودکار به شبکه را خاموش کن.</p><span class="tag">نکته: به هر شبکه‌ای فقط به‌خاطر اسم آشنایش اعتماد نکن.</span></article>
+<article class="card"><div class="ico">💾</div><h3>درس ۶: پشتیبان‌گیری از فایل‌ها</h3><p><b>چرا مهم است؟</b> خرابی دستگاه، اشتباه ناخواسته یا گم‌شدن فایل ممکن است اطلاعات را از بین ببرد.</p><p><b>چه کار کنیم؟</b> از فایل‌های مهم یک نسخه دیگر روی فلش سالم یا فضای ذخیره‌سازی مطمئن نگه دار و گاهی بازشدن نسخه پشتیبان را امتحان کن.</p><span class="tag">نکته: نسخه پشتیبان را جدا از فایل اصلی نگه دار.</span></article>
+</div><div class="notice">اگر فکر می‌کنی حسابت به خطر افتاده، از یک دستگاه مطمئن رمز را عوض کن، نشست‌های ناشناس را خارج کن، تأیید دومرحله‌ای را فعال کن و از یک بزرگسال مورد اعتماد یا پشتیبانی رسمی کمک بگیر.</div></section>
+<section id="habits"><div class="section-head"><h2>۴ عادت برای امنیت بیشتر</h2><p>کارهای کوچک، اثرهای مهمی دارند.</p></div><div class="steps">
+<div class="step"><span class="num">۰۱ / رمز</span><b>رمزهای متفاوت</b><small>یک رمز را برای چند حساب تکرار نکن.</small></div>
+<div class="step"><span class="num">۰۲ / به‌روزرسانی</span><b>نرم‌افزار به‌روز</b><small>به‌روزرسانی‌ها می‌توانند ایرادهای امنیتی را برطرف کنند.</small></div>
+<div class="step"><span class="num">۰۳ / لینک</span><b>مکث و بررسی</b><small>قبل از بازکردن لینک یا فایل ناشناس، منبعش را بررسی کن.</small></div>
+<div class="step"><span class="num">۰۴ / پشتیبان</span><b>نسخه پشتیبان</b><small>از فایل‌های مهم، نسخه‌ای جداگانه نگه دار.</small></div>
+</div><div class="notice">یادآوری: هیچ روش ساده‌ای امنیت صددرصدی ایجاد نمی‌کند؛ ترکیب چند عادت امن، خطر را کاهش می‌دهد.</div></section>
+<section id="checklist"><div class="section-head"><h2>چک‌لیست امنیت روزانه</h2><p>مواردی را که رعایت می‌کنی علامت بزن.</p></div><div class="card" id="checks">
+<label class="check"><input type="checkbox"> برای حساب‌هایم رمزهای متفاوت دارم.</label>
+<label class="check"><input type="checkbox"> کدهای تأیید را محرمانه نگه می‌دارم.</label>
+<label class="check"><input type="checkbox"> قبل از بازکردن لینک، فرستنده و نشانی را بررسی می‌کنم.</label>
+<label class="check"><input type="checkbox"> برنامه‌ها را از منابع رسمی دریافت می‌کنم.</label>
+<label class="check"><input type="checkbox"> از فایل‌های مهم نسخه پشتیبان دارم.</label>
+<label class="check"><input type="checkbox"> اطلاعات شخصی و موقعیتم را بی‌دلیل منتشر نمی‌کنم.</label>
+<div class="feedback" id="checkProgress" aria-live="polite">۰ مورد از ۶ مورد انجام شده</div>
+</div></section>
+<section id="glossary"><div class="section-head"><h2>واژه‌نامه کوچک</h2><p>چند اصطلاح پرکاربرد در دنیای امنیت دیجیتال</p></div><div class="grid">
+<article class="card"><h3>بدافزار (Malware)</h3><p>برنامه‌ای که با هدف آسیب‌زدن، ایجاد اختلال یا دسترسی غیرمجاز طراحی شده است.</p></article>
+<article class="card"><h3>رمزنگاری (Encryption)</h3><p>تبدیل اطلاعات به شکلی که بدون کلید مناسب قابل خواندن نباشد.</p></article>
+<article class="card"><h3>حریم خصوصی (Privacy)</h3><p>حق افراد برای کنترل اطلاعات شخصی و چگونگی استفاده از آن‌ها.</p></article>
+</div></section>
+
+<section id="account-safety"><div class="section-head"><h2>🔑 حفاظت از حساب‌ها</h2><p>چطور دسترسی به حساب‌های کاربری‌مان را امن‌تر نگه داریم؟</p></div><div class="grid">
+<article class="card"><h3>رمز عبور یکتا</h3><p>برای هر حساب رمز جداگانه و طولانی انتخاب کن. اگر یک رمز در چند جا تکرار شود، لو رفتن آن می‌تواند چند حساب را در معرض خطر قرار دهد.</p></article>
+<article class="card"><h3>تأیید دومرحله‌ای</h3><p>این قابلیت را در تنظیمات امنیتی حساب‌ها فعال کن. کدهای یک‌بارمصرف و کدهای بازیابی را محرمانه نگه دار.</p></article>
+<article class="card"><h3>بررسی ورودها</h3><p>هر از گاهی بخش دستگاه‌ها یا نشست‌های فعال را بررسی کن و از دستگاه‌هایی که نمی‌شناسی خارج شو.</p></article>
+</div></section>
+<section id="online-fraud"><div class="section-head"><h2>🎣 تشخیص فریب آنلاین</h2><p>پیام‌ها و وب‌سایت‌های جعلی معمولاً تلاش می‌کنند ما را عجولانه تصمیم‌گیری کنند.</p></div><div class="grid">
+<article class="card"><h3>به نشانه‌ها توجه کن</h3><p>درخواست فوری اطلاعات، وعده جایزه غیرعادی، تهدید به مسدودشدن حساب و نشانی‌های اینترنتی عجیب می‌توانند هشداردهنده باشند.</p></article>
+<article class="card"><h3>از مسیر رسمی بررسی کن</h3><p>به‌جای بازکردن لینک پیام، برنامه یا نشانی رسمی آن سرویس را خودت باز کن و اعلان را از همان‌جا بررسی کن.</p></article>
+<article class="card"><h3>قبل از ارسال، مکث کن</h3><p>رمز، کد تأیید و اطلاعات شخصی را در پاسخ به پیام یا تماس ناشناس ارائه نکن. در صورت تردید از فردی مورد اعتماد کمک بگیر.</p></article>
+</div></section>
+<section id="data-care"><div class="section-head"><h2>🔒 مراقبت از اطلاعات</h2><p>اطلاعات شخصی ارزشمندند؛ فقط به اندازه لازم و برای افراد یا سرویس‌های معتبر آن‌ها را به اشتراک بگذار.</p></div><div class="grid">
+<article class="card"><h3>تنظیمات حریم خصوصی</h3><p>مشخص کن چه کسانی می‌توانند پست‌ها، عکس‌ها، فهرست دوستان یا موقعیت مکانی‌ات را ببینند.</p></article>
+<article class="card"><h3>محدودکردن اطلاعات عمومی</h3><p>نشانی خانه، شماره تماس، برنامه روزانه و اطلاعات شناسایی را بی‌دلیل در فضای عمومی منتشر نکن.</p></article>
+<article class="card"><h3>دسترسی برنامه‌ها</h3><p>مجوزهای برنامه‌ها را بررسی کن؛ هر برنامه‌ای لزوماً به موقعیت مکانی، دوربین یا مخاطبان نیاز ندارد.</p></article>
+</div></section>
+
+<section id="quiz"><div class="section-head"><h2>آزمون کوتاه امنیت سایبری</h2><p>دانسته‌هایت را امتحان کن.</p></div><div class="quiz"><div class="quiz-top"><span class="quiz-brand">🛡️ آزمون سپر دیجیتال</span><span id="qcount" class="eyebrow">پرسش ۱ از ۵</span></div><div id="question" class="question">اگر پیام ناشناسی از تو کد تأیید بخواهد، چه کار می‌کنی؟</div><div id="options"></div><div id="feedback" class="feedback" aria-live="polite"></div><button id="next" class="btn next" hidden>پرسش بعدی ←</button><div class="quiz-foot">یک گزینه را انتخاب کن؛ پس از پاسخ، نتیجه هر گزینه نمایش داده می‌شود.</div></div></section>
+</main><footer><div class="wrap">سپر دیجیتال | پروژه آموزشی کار و فناوری<br>هدف این وب‌سایت، افزایش آگاهی و تشویق به رفتار مسئولانه در فضای مجازی است.</div></footer>
+<script>
+const questions=[
+{q:'اگر پیام ناشناسی از تو کد تأیید بخواهد، چه کار می‌کنی؟',a:['کد را سریع می‌فرستم','کد را محرمانه نگه می‌دارم و پیام را بررسی می‌کنم','پیام را برای همه دوستانم می‌فرستم'],c:1,why:'کدهای تأیید را نباید در اختیار دیگران گذاشت.'},
+{q:'کدام رمز عبور انتخاب بهتری است؟',a:['12345678','اسم خودم و سال تولدم','یک عبارت طولانی و غیرقابل حدس که برای حساب دیگری استفاده نشده'],c:2,why:'طولانی‌بودن و یکتا بودن رمز، امنیت را بیشتر می‌کند.'},
+{q:'با یک لینک عجیب در پیام ناشناس چه می‌کنی؟',a:['قبل از کلیک، فرستنده و نشانی را بررسی می‌کنم','چون جایزه دارد فوراً بازش می‌کنم','اطلاعات حسابم را در آن وارد می‌کنم'],c:0,why:'بررسی لینک و منبع پیام، احتمال فیشینگ را کمتر می‌کند.'},
+{q:'تأیید دومرحله‌ای چه کمکی می‌کند؟',a:['سرعت اینترنت را بیشتر می‌کند','یک مرحله امنیتی اضافه برای ورود ایجاد می‌کند','نیاز به به‌روزرسانی را از بین می‌برد'],c:1,why:'یک مرحله اضافی می‌تواند جلوی ورود افراد غیرمجاز را بگیرد.'},
+{q:'بهترین محل دریافت برنامه‌ها کجاست؟',a:['هر لینکی که در پیام ناشناس فرستاده شود','فایل‌های ناشناس در سایت‌های نامعتبر','فروشگاه‌ها و وب‌سایت‌های رسمی'],c:2,why:'منابع رسمی خطر دریافت برنامه‌های دستکاری‌شده را کمتر می‌کنند.'}
+];let current=0,score=0,answered=false;
+const $=id=>document.getElementById(id);
+function render(){answered=false;const item=questions[current];$('qcount').textContent=`پرسش ${current+1} از ${questions.length}`;$('question').textContent=item.q;$('feedback').textContent='';$('next').hidden=true;$('next').textContent='پرسش بعدی ←';$('options').innerHTML='';item.a.forEach((label,i)=>{const b=document.createElement('button');b.className='option';b.innerHTML=`<span class="choice-dot"></span><span class="option-label"></span>`;b.querySelector('.option-label').textContent=label;b.onclick=()=>answer(i);$('options').appendChild(b)});}
+function answer(i){if(answered)return;answered=true;const item=questions[current];if(i===item.c)score++;const buttons=[...$('options').children];buttons.forEach((b,n)=>{b.disabled=true;if(n===item.c)b.classList.add('correct');else if(n===i)b.classList.add('wrong');});$('feedback').textContent=(i===item.c?'✓ آفرین! ':'✕ این گزینه درست نیست. ')+item.why;$('next').hidden=false;if(current===questions.length-1)$('next').textContent='دیدن نتیجه ←';}
+function advance(){if(current<questions.length-1){current++;render();return;}if($('next').textContent==='شروع دوباره ←'){current=0;score=0;render();return;}$('qcount').textContent='آزمون تمام شد';$('question').innerHTML=`<div class="quiz-result"><div class="score">${score} / ${questions.length}</div><b>نتیجه آزمون تو</b><p>${score===questions.length?'فوق‌العاده بود! به نظر می‌رسد نکات امنیتی را خوب یاد گرفته‌ای.':score>=3?'آفرین! بیشتر پاسخ‌ها را درست دادی.':'خوب تلاش کردی؛ درس‌ها را یک بار دیگر مرور کن و دوباره امتحان بده.'}</p></div>`;$('options').innerHTML='';$('feedback').textContent='';$('next').textContent='شروع دوباره ←';}render();$('next').onclick=advance;document.querySelectorAll('#checks input').forEach(x=>x.addEventListener('change',()=>{const n=[...document.querySelectorAll('#checks input')].filter(y=>y.checked).length;$('checkProgress').textContent=`${n} مورد از ۶ مورد انجام شده`;}));
+// نمایش نرم بخش‌ها هنگام اسکرول
+const revealItems=document.querySelectorAll('main section:not(.hero), .hero > div, footer .wrap');
+revealItems.forEach(el=>el.classList.add('reveal'));
+if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}})},{threshold:.12});revealItems.forEach(el=>observer.observe(el));}else{revealItems.forEach(el=>el.classList.add('visible'));}
+</script>
+</body></html>
